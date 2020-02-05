@@ -57,19 +57,14 @@
                 <img src="./img/message.jpeg" width="1000px">
             </div>
             <div id="message_box">
-                <h3 id="write_title">
-                    쪽지 보내기
-                </h3>
+                <h3 id="write_title">쪽지 보내기</h3>
                 <ul class="top_buttons">
                     <li>
-                        <span>
-                            <a href="message_box.php?mode=rv">받은 쪽지함
-                            </a>
-                        </span>
+                        <span><a href="message_box.php?mode=rv">받은 쪽지함</a></span>
                     </li>
                     <li>
-                        <span>
-                            <a href="message_box.php?mode=send">보낸 쪽지함</a></span></li>
+                        <span><a href="message_box.php?mode=send">보낸 쪽지함</a></span>
+                    </li>
                 </ul>
                 <form
                     name="message_form"
@@ -78,23 +73,19 @@
                     <div id="write_msg">
                         <ul>
                             <li>
-                                <span class="col1">보내는 사람 :
-                                </span>
+                                <span class="col1">보내는 사람 :</span>
                                 <span class="col2"><?=$user_id?></span>
                             </li>
                             <li>
-                                <span class="col1">수신 아이디 :
-                                </span>
+                                <span class="col1">수신 아이디 :</span>
                                 <span class="col2"><input name="rv_id" type="text"></span>
                             </li>
                             <li>
-                                <span class="col1">제목 :
-                                </span>
+                                <span class="col1">제목 :</span>
                                 <span class="col2"><input name="subject" type="text"></span>
                             </li>
                             <li id="text_area">
-                                <span class="col1">내용 :
-                                </span>
+                                <span class="col1">내용 :</span>
                                 <span class="col2">
                                     <textarea name="content"></textarea>
                                 </span>
@@ -104,7 +95,6 @@
                     </div>
                 </form>
             </div>
-            <!-- message_box -->
         </section>
         <footer>
             <?php include "footer.php";?>
