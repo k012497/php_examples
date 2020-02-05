@@ -15,7 +15,7 @@
     </header>
     <section>
         <div id="main_img_bar">
-            <img src="./img/message.jpeg">
+            <img src="./img/message.jpeg" width="1000px">
         </div>
         <div id="message_box">
             <h3 class="title">
@@ -40,10 +40,10 @@
                     $content = str_replace("\n", "<br />", $content);
 
                     if($mode === "send"){
-                        // 송신 쪽지함(내가 보낸 쪽지함)일 경우 받는 사람의 이름을 가져온다
+                        // 보낸 쪽지함일 경우, 받는 사람의 이름을 가져온다
                         $result_name = mysqli_query($con, "select name from members where id = '$rv_id'");
                     } else {
-                        // 수신 쪽지함(내가 받은 쪽지함)일 경우 보낸 사람의 이름을 가져온다
+                        // 받은 쪽지함일 경우, 보낸 사람의 이름을 가져온다
                         $result_name = mysqli_query($con, "select name from members where id = '$rv_id'");
                     }
 
@@ -67,13 +67,27 @@
                     <?=$content?>
                 </li>
             </ul>
-
+            <?php
+                if($mode === "send"){
+            ?>
             <ul class="buttons">
+                 <!-- 내가 보낸 쪽지일 경우 답장 불가 -->
 				<li><button onclick="location.href='message_box.php?mode=rv'">받은 쪽지함</button></li>
 				<li><button onclick="location.href='message_box.php?mode=send'">보낸 쪽지함</button></li>
-				<li><button onclick="location.href='message_response_form.php?num=<?=$num?>'">답장 보내기</button></li>
 				<li><button onclick="location.href='message_delete.php?num=<?=$num?>&mode=<?=$mode?>'">삭제</button></li>
-		</ul>
+            </ul>
+            <?php
+                } else {
+                    ?>
+            <ul class="buttons">
+                <li><button onclick="location.href='message_box.php?mode=rv'">받은 쪽지함</button></li>
+				<li><button onclick="location.href='message_box.php?mode=send'">보낸 쪽지함</button></li>
+                <li><button onclick="location.href='message_response_form.php?num=<?=$num?>'">답장 보내기</button></li>
+				<li><button onclick="location.href='message_delete.php?num=<?=$num?>&mode=<?=$mode?>'">삭제</button></li>
+            </ul>
+            <?php
+                }
+            ?>
         </div>
     </section>
     <footer>
