@@ -5,19 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MOVIEW | sign in</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <link rel="stylesheet" href="./css/join_style.css?ver=1.1">
     <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/sign_in.js"></script>
+    <style>
+        span.hidden {
+            display: none;
+        }
+        
+        #check_msg {
+            position: relative;
+            top: -10px;
+            color: rgb(202, 32, 32);
+            margin: -5px 0 5px 0;
+        }
+    </style>
     <script>
         function switchIpSecurity(){
             const switchValue = document.querySelector("#ip-security-switch");
             if(switchValue.innerHTML === "ON"){
                 switchValue.innerHTML = "OFF"
                 alert("IP 보안을 해제합니다.");
-            }else{
+            } else {
                 switchValue.innerHTML = "ON"
                 alert("IP 보안을 적용합니다.");
+            }
         }
-}
     </script>
 </head>
 <body>
@@ -27,10 +41,11 @@
 
     <div id="sign-in">
         <h3><i> MOVIEW </i></h3>
-        <form id="sign-in-form" method="post" action="sign_in.php">
-            <input type="text" name="id" placeholder="ID"><br/>
-            <input type="password" name="pw" placeholder="PASSWORD"><br/>
-            <input id="btn-sign-in" type="submit" value="SIGN IN">
+        <span id="check_msg" class="hidden"></span>
+        <form id="sign-in-form" method="post" action="sign_in.js">
+            <input id="id" type="text" name="id" placeholder="ID"><br/>
+            <input id="pw" type="password" name="pw" placeholder="PASSWORD"><br/>
+            <input id="btn-sign-in" type="button" value="SIGN IN">
         </form>
         <div id="option">
             <form action="#">
