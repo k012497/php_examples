@@ -16,14 +16,11 @@
     <h3>CHECK ID</h3>
     <p>
     <?php
-   $id = $_GET["id"];
+    $id = $_GET["id"];
 
-   if(!$id) 
-   {
-      echo("<li>enter id you want!</li>");
-   }
-   else
-   {
+    if(!$id) {
+        echo("<li>enter id you want!</li>");
+    } else {
       $con = mysqli_connect("localhost", "root", "01240124", "my_page");
  
       $sql = "select * from members where id='$id'";
@@ -42,7 +39,7 @@
       }
     
       mysqli_close($con);
-   }
+    }
 ?>
     </p>
     <div id="close">

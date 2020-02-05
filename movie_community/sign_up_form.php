@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <link rel="stylesheet" href="./css/join_style.css">
     <link rel="stylesheet" href="./css/common.css">
-    <script src="./js/sign_up.js"></script>
+    <script src="./js/sign_up2.js"></script>
     <style>
         #idMsg {
             display: inline-block;
@@ -15,34 +16,33 @@
     </style>
     <title>MOVIEW | sign up</title>
 </head>
-<body onload="init();">
-    <header>
+<body>
+    <header style="background: transparent;">
         <?php include "header.php"; ?>
     </header>
-
     <div id="sign-up">
         <h3>✱<i> welcome! </i>✱</i></h3>
         <br />
-        <form id="sign-up-form" name="signUp" method="POST" action="user_insert.php">
+        <form id="sign-up-form" name="signUp" method="POST" action="member_insert.php">
             <label for="id">id</label>
-            <input id="id" class="required" name="id" type="text" onkeyup="checkId(this.value);" required>
-            <input id="btn-id-check" type="button" value="check" onclick="checkIdExisting();">
+            <input id="id" class="required" name="id" type="text" required>
+            <input id="btn-id-check" type="button" value="check" disabled=true>
             <span class="warning-msg" id="idMsg"></span><br />
     
             <label for="password">password</label>
-            <input id="password" class="required" name="password" type="text" onkeyup="checkPassword(this.value);" required>
+            <input id="password" class="required" name="password" type="text" required>
             <span class="warning-msg" id="password1Msg"></span><br />
     
             <label for="password2">check password</label>
-            <input id="password2" class="required" name="passwordCheck" type="text" onkeyup="checkPasswordsSame();" required>
+            <input id="password2" class="required" name="passwordCheck" type="text" required>
             <span class="warning-msg" id="password2Msg"></span><br />
     
             <label for="name">name</label>
-            <input id="name" class="required" name="name" type="text" onkeyup="checkName(this.value);" required>
+            <input id="name" class="required" name="name" type="text" required>
             <span class="warning-msg" id="nameMsg"></span><br />
     
             <label for="dob">date of birth</label>
-            <input id="dob" class="required" name="birthday" type="date" onchange="checkDateOfBirth(this.value);" required>
+            <input id="dob" class="required" name="birthday" type="date" required>
             <span class="warning-msg" id="dobMsg"></span><br />
     
             <label for="gender">gender</label>
@@ -53,7 +53,7 @@
              <span class="warning-msg"></span><br />
     
             <label for="email">email(option)</label>
-            <input id="email" name="email" type="text" onkeyup="checkEmail();">
+            <input id="email" name="email" type="text">
             <span class="warning-msg" id="emailMsg"></span><br />
     
             <label for="mobile">mobile</label>
@@ -66,9 +66,9 @@
                 <option value="korea">캐나다 +82</option>
                 <option value="korea">호주 +82</option>
              </select>
-            <input id="mobile-num" class="required" name="mobile" type="text" onkeyup="checkMobile(this.value);" required>
+            <input id="mobile-num" class="required" name="mobile" type="text" required>
             <input id="btn-code" type="button" value="인증번호 받기"><br />
-            <input id="code" name="code" type="text"  placeholder="인증번호" required>
+            <input id="code" name="code" type="text"  placeholder="인증번호">
             <span class="warning-msg" id="mobileMsg"></span><br />
 
             <label for="chptcha">captcha</label>

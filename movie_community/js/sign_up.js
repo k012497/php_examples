@@ -14,7 +14,6 @@ function submitForm(){
         location.href = "sign_in.html";
         document.signUp.submit();
     }
-
 }
 
 function checkInputValues(){
@@ -89,6 +88,7 @@ function checkName(name){
         document.getElementById('nameMsg').textContent = "공백 제외 한글 2~8자만 가능합니다.";
     }
 }
+
 function checkDateOfBirth(date){
     // 오늘 날짜 이전인지 검사
     let today = new Date();
