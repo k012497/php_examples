@@ -30,11 +30,11 @@
             <span class="warning-msg" id="idMsg"></span><br />
     
             <label for="password">password</label>
-            <input id="password" class="required" name="password" type="text" required>
+            <input id="password" class="required" name="password" type="password" required>
             <span class="warning-msg" id="password1Msg"></span><br />
     
             <label for="password2">check password</label>
-            <input id="password2" class="required" name="passwordCheck" type="text" required>
+            <input id="password2" class="required" name="passwordCheck" type="password" required>
             <span class="warning-msg" id="password2Msg"></span><br />
     
             <label for="name">name</label>
