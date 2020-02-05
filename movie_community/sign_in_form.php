@@ -19,6 +19,7 @@
             top: -10px;
             color: rgb(202, 32, 32);
             margin: -5px 0 5px 0;
+            font-size: 13px;
         }
     </style>
     <script>
