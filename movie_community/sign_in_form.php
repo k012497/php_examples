@@ -21,7 +21,7 @@
     </script>
 </head>
 <body>
-    <header>
+    <header style="background: transparent;">
         <?php include "header.php" ?>
     </header>
 
