@@ -1,3 +1,9 @@
+section {
+    margin: 0 auto;
+    width: 1000px;
+    background-color: white;
+    padding: 30px 0;
+}
 
 a {
     color: black;

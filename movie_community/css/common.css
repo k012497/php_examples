@@ -43,11 +43,19 @@ a:active {
     color: #222222; 
 }
 
+textarea {
+    resize: none;
+}
+
+header {
+    background-color: white;
+}
+
 header, nav, footer {
     user-select: none;
 }
 
-nav, footer {
+header, nav, footer {
     width: 1000px;
     margin: 0 auto;
 }
