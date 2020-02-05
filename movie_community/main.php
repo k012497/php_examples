@@ -25,7 +25,7 @@
         <div id="main_content">
             <!-- 최근 게시글 -->
                 <div id="latest">
-                    <h4>최근 게시글(15장)</h4>
+                    <h4>최근 게시글</h4>
                     <ul>
 
 <?php
