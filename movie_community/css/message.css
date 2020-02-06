@@ -1,9 +1,3 @@
-section {
-    margin: 0 auto;
-    width: 1000px;
-    background-color: white;
-}
-
 /* 쪽지 보내기(message_form.php) */
 #message_box { 
     position: relative; 
