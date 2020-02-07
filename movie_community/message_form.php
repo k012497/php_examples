@@ -30,6 +30,9 @@
         <header>
             <?php include "header.php";?>
         </header>
+        <nav>
+            <?php include "nav.php";?>
+        </nav>
         <?php
             if (!$user_id )
             {
