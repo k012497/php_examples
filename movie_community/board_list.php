@@ -21,7 +21,10 @@
         <div id="main_img_bar">
             <img src="./img/message.jpeg">
         </div>
-        <div id="board_box">     
+        <div id="board_box">
+            <h3 id="board_title">
+                게시판 > 목록
+            </h3>     
             <ul id="board_list">
                 <li>
                     <span class="col1">번호</span>
@@ -36,7 +39,7 @@
 
                     if(isset($_GET["page"])){
                         $page = $_GET["page"];
-                    } else {
+                    } else if(empty($_GET["page"])) {
                         $page = 1;
                     }
 
@@ -126,7 +129,7 @@
                 <?php
                     if($user_id){
                 ?>
-                        <button onclick="location.href='board_form.php'">글쓰기</button>
+                        <button onclick="location.href='board_form.php?mode=insert'">글쓰기</button>
                 <?php
                     }
                 ?>
@@ -134,5 +137,8 @@
             </ul>
         </div>
     </section>
+    <footer>
+        <?php include "footer.php";?>
+    </footer>
 </body>
 </html>
