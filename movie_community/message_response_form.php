@@ -1,3 +1,7 @@
+<?php
+    include_once "db_connector.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +40,7 @@ function check_input() {
             <?php
             $num = $_GET["num"];
 
-            $con = mysqli_connect("localhost", "root", "01240124", "my_page");
+            // $con = mysqli_connect("localhost", "root", "01240124", "my_page");
             $sql = "select * from message where num = $num";
             $result = mysqli_query($con, $sql);
 

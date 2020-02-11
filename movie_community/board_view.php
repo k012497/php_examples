@@ -26,10 +26,12 @@
                 게시판 > 내용보기
             </h3>
             <?php
+            include_once "db_connector.php";
+            
             $num = $_GET["num"];
             $page = $_GET["page"];
 
-            $con = mysqli_connect("localhost", "root", "01240124", "my_page");
+            // $con = mysqli_connect("localhost", "root", "01240124", "my_page");
             $sql = "select * from board where num = $num";
             $result = mysqli_query($con, $sql);
 
@@ -72,11 +74,10 @@
                 </li>
             </ul>
             <ul class="buttons">
-                <!-- <li><button onclick="location.href = 'board_modify_form.php?mode=update&num=<?=$num?>&page=<?=$page?>'">수정</button></li> -->
-                <li><button onclick="location.href = 'board_form.php?mode=update&num=<?=$num?>&page=<?=$page?>'">수정</button></li>
-                <li><button onclick="location.href = 'board_query.php?mode=delete&num=<?=$num?>&page=<?=$page?>'">삭제</button></li>
-                <li><button onclick="location.href = 'board_form.php'">글쓰기</button></li>
-                <li><button onclick="location.href = 'board_list.php?page=<?=$page?>'">목록</button></li>
+                <li><button onclick="location.href='board_form.php?mode=update&num=<?=$num?>&page=<?=$page?>'">수정</button></li>
+                <li><button onclick="location.href='board_query.php?mode=delete&num=<?=$num?>&page=<?=$page?>'">삭제</button></li>
+                <li><button onclick="location.href='board_form.php'">글쓰기</button></li>
+                <li><button onclick="location.href='board_list.php?page=<?=$page?>'">목록</button></li>
             </ul>
         </div>
     </div>

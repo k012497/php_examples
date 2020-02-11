@@ -1,3 +1,7 @@
+<?php
+    include_once "db_connector.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

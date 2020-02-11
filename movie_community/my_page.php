@@ -7,7 +7,6 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <link rel="stylesheet" href="./css/join_style.css">
     <link rel="stylesheet" href="./css/common.css">
-    <!-- <link rel="stylesheet" href="./css/main.css"> -->
     <script src="./js/member_update.js"></script>
     <style>
         #idMsg {

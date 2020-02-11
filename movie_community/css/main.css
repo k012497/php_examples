@@ -1,5 +1,13 @@
 /* main */
 
+.main_right {
+    right: 30px;
+}
+
+.main_left {
+    left: 30px;
+} 
+
 #main_img_bar { 
     margin: 0 auto;
     width: 1000px;
@@ -12,17 +20,17 @@
     position: relative; 
     width: 1000px; 
     height: 240px; 
-    margin: 0 auto; 
+    margin: 10px auto; 
 }
 
 #latest { 
     position: absolute; 
     top: 30px; 
-    left: 50px; 
+    /* left: 50px;  */
 }
 
 #latest h4 { 
-    width: 500px; 
+    width: 445px; 
     font-size: 16px; 
     padding-bottom: 5px; 
     border-bottom: solid 1px #dddddd; 
@@ -42,11 +50,11 @@
 }
 
 #latest span:nth-child(1) { 
-    width: 280px; 
+    width: 250px; 
 }
 
 #latest span:nth-child(2) { 
-    width: 100px; 
+    width: 90px; 
 }
 
 #latest span:nth-child(3) { 

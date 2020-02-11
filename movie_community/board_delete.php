@@ -1,8 +1,10 @@
 <?php
+    include_once "db_connector.php";
+
     $num = $_GET["num"];
     $page = $_GET["page"];
 
-    $con = mysqli_connect("localhost", "root", "01240124", "my_page");
+    // $con = mysqli_connect("localhost", "root", "01240124", "my_page");
     $sql = "select * from board where num = $num";
     $result = mysqli_query($con, $sql);
     $row = mysqli_fetch_array($result);

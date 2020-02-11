@@ -1,3 +1,6 @@
+<?php
+    include_once "db_connector.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +10,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/board.css">
     <link rel="stylesheet" href="./css/main.css">
-    <title>MOVIEW | BOARD</title>
+    <title>MOVIEW | notice</title>
 </head>
 <body>
     <header>
@@ -23,7 +26,7 @@
         </div>
         <div id="board_box">
             <h3 id="board_title">
-                게시판 > 목록
+                공지사항 > 목록
             </h3>     
             <ul id="board_list">
                 <li>
@@ -43,7 +46,7 @@
                         $page = 1;
                     }
 
-                    $con = mysqli_connect("localhost", "root", "01240124", "my_page");
+                    // $con = mysqli_connect("localhost", "root", "01240124", "my_page");
                     $sql = "select * from board order by num desc";
                     $result = mysqli_query($con, $sql);
                     $total_record = mysqli_num_rows($result);

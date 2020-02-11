@@ -1,10 +1,11 @@
 <meta charset='utf-8'>
 
 <?php
+	include_once "db_connector.php";
 	$num = $_GET["num"];
 	$mode = $_GET["mode"];
 
-	$con = mysqli_connect("localhost", "root", "01240124", "my_page");
+	// $con = mysqli_connect("localhost", "root", "01240124", "my_page");
 	$sql = "delete from message where num=$num";
 	mysqli_query($con, $sql);
 	mysqli_close($con);

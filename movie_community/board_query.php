@@ -1,5 +1,7 @@
 <?php
     session_start();
+    include_once "db_connector.php";
+    
     if(isset($_SESSION["userid"])){
         $user_id = $_SESSION["userid"];
     } else {
@@ -52,7 +54,7 @@
     function delete_data(){
         global $num, $page;
 
-        $con = mysqli_connect("localhost", "root", "01240124", "my_page");
+        // $con = mysqli_connect("localhost", "root", "01240124", "my_page");
         $sql = "select * from board where num = $num";
         $result = mysqli_query($con, $sql);
         $row = mysqli_fetch_array($result);

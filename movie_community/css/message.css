@@ -115,13 +115,12 @@
 }
 
 #message_box .top_buttons a:link { 
-    text-decoration: underline; 
     color: green; 
 }
 
 #message_box .top_buttons a:visited { 
-    text-decoration: underline; 
-    color: green; 
+    color: black; 
+    font-size: 20px;
 }
 
 #message_box .buttons { 

@@ -1,3 +1,7 @@
+<?php
+    include_once "db_connector.php";
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -52,10 +56,11 @@
                 <h3 id="write_title">쪽지 보내기</h3>
                 <ul class="top_buttons">
                     <li>
-                        <span><a href="message_box.php?mode=rv">받은 쪽지함</a></span>
+                        <span><a href="message_box.php?mode=rv">📩받은 쪽지함</a></span>
                     </li>
+                    <li>|</li>
                     <li>
-                        <span><a href="message_box.php?mode=send">보낸 쪽지함</a></span>
+                        <span><a href="message_box.php?mode=send">📝보낸 쪽지함</a></span>
                     </li>
                 </ul>
                 <form

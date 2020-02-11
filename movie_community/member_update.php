@@ -1,4 +1,5 @@
 <?php
+    include_once "db_connector.php";
     $user_id = $_GET["userId"];
 
     $new_pw = $_POST["password"];
@@ -6,7 +7,7 @@
     $new_email = $_POST["email"];
     $new_mobile = $_POST["mobile"];
 
-    $con = mysqli_connect("localhost", "root", "01240124", "my_page");
+    // $con = mysqli_connect("localhost", "root", "01240124", "my_page");
     $sql = "update members set pw = '{$new_pw}', name = '{$new_name}', email = '{$new_email}', mobile = '{$new_mobile}' where id = '{$user_id}';";
 
     $result = mysqli_query($con, $sql);

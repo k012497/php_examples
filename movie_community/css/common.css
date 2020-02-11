@@ -24,6 +24,14 @@ ul {
     list-style-type: none; 
 }
 
+button, #btn_list{
+    background-color: rgb(216, 216, 216);
+    border: 1px solid transparent;
+    border-radius: 7px;
+    font-size: 12px;
+    /* color: #ffffff; */
+}
+
 a { 
     display: inline-block; 
     text-decoration: none; 

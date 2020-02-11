@@ -1,5 +1,7 @@
 <?php
-    $con = mysqli_connect("localhost", "root", "01240124", "my_page");
+    include_once "db_connector.php";
+
+    // $con = mysqli_connect("localhost", "root", "01240124", "my_page");
 	$sql = "select * from members where id='$user_id'";
     $result = mysqli_query($con, $sql);
     $user_info = mysqli_fetch_array($result);

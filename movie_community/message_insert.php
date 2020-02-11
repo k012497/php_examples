@@ -1,5 +1,6 @@
 <meta charset='utf-8'>
 <?php
+	include_once "db_connector.php";
     $send_id = $_GET["send_id"];
 
     $rv_id = $_POST['rv_id'];
@@ -10,7 +11,7 @@
 	date_default_timezone_set('Asia/Seoul');
 	$regist_day = date("Y-m-d (H:i)");  // 현재의 '년-월-일-시-분'을 저장
 
-	$con = mysqli_connect("localhost", "root", "01240124", "my_page");
+	// $con = mysqli_connect("localhost", "root", "01240124", "my_page");
 	$sql = "select * from members where id='$rv_id'";
 	$result = mysqli_query($con, $sql);
 	$num_record = mysqli_num_rows($result);

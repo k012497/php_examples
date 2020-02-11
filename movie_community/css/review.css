@@ -1,0 +1,51 @@
+/* list css */
+
+#list_search {
+	height:30px;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+#list_search #list_search1 {
+	float:left;
+	margin-top:2px;
+}
+
+#list_search #list_search2 {
+	float:left;
+	margin-left:380px;
+	margin-top:1px;
+}
+
+#list_search #list_search2 select {
+	width:80px;
+	height:21px;
+	border:solid 1px #cccccc;
+}
+
+#list_search #list_search3 {
+	float:left;
+	margin-left:3px;
+}
+
+#list_search #list_search3 input {
+	width:120px;
+	height:18px;
+	border:solid 1px #cccccc;
+}
+
+#list_search #list_search4 {
+	float:left;
+	margin-left:5px;
+    margin-top:1px;
+}
+
+#list_search #list_search4 input {
+    border: 0;
+    padding: 2px;
+}
+
+#btn_list {
+    cursor: pointer;
+    padding: 5px 10px;
+}

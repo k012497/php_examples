@@ -1,4 +1,6 @@
 <?php
+    include_once "db_connector.php";
+
     $id = $_POST["id"];
     $password = $_POST["password"];
     $name = $_POST["name"];
@@ -6,8 +8,6 @@
     $email = $_POST["email"];
     $gender = $_POST["gender"];
     $mobile  = $_POST["mobile"];
-              
-    $con = mysqli_connect("localhost", "root", "01240124", "my_page");
 
 	$sql = "insert into members ";
     $sql .= "values(null, '$id', '$password', '$name', '$birthday', '$email', '$gender', '$mobile')";
