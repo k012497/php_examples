@@ -117,9 +117,9 @@
                 <h3 id="board_title">
                     <?php 
                         if($mode === "insert"){
-                            echo "게시판 > 글 쓰기";
+                            echo "뉴스 > 글 쓰기";
                         } else if($mode === "update"){
-                            echo "게시판 > 글 수정";
+                            echo "뉴스 > 글 수정";
                         }
                     ?>
                 </h3>
