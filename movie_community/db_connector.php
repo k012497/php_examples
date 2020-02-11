@@ -22,6 +22,7 @@ while ($row=mysqli_fetch_row($result)) {
 
 if($dbflag === "NO"){
   $sql = "create database ".DB_NAME;
+  
   if(mysqli_query($con, $sql)){
     echo "<script>alert(".DB_NAME."' 디비 생성되었습니다.');</script> ";
   }else{

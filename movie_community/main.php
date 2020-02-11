@@ -40,12 +40,12 @@
 <div id="main_content">
     <!-- 최근 게시글 -->
     <div id="latest" class="main_left">
-        <h4>&nbsp;&nbsp;공지사항</h4>
+        <h4>&nbsp;&nbsp;📰 요즘 어떤 일이?</h4>
         <ul>
 
     <?php
     include_once "db_connector.php";
-    // $con = mysqli_connect("localhost", "root", "01240124", "my_page");
+
     $sql = "select * from board order by num desc limit 5";
     $result = mysqli_query($con, $sql);
 
@@ -72,7 +72,7 @@
 
     <!-- 최근 게시글2 -->
     <div id="latest" class="main_right">
-        <h4>&nbsp;&nbsp;최근 리뷰</h4>
+        <h4>&nbsp;&nbsp;✍🏻 최근 등록된 리뷰</h4>
         <ul>
 
         <?php

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/board.css">
     <link rel="stylesheet" href="./css/main.css">
-    <title>MOVIEW | notice</title>
+    <title>MOVIEW | news</title>
 </head>
 <body>
     <header>
@@ -26,7 +26,7 @@
         </div>
         <div id="board_box">
             <h3 id="board_title">
-                공지사항 > 목록
+                뉴스 > 목록
             </h3>     
             <ul id="board_list">
                 <li>
